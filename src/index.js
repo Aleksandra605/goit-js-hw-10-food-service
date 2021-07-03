@@ -8,7 +8,6 @@ const Theme = {
 
 const listMenu = document.querySelector('.js-menu');
 listMenu.insertAdjacentHTML('beforeend', foodCard(menu));
-// listMenu.append(foodCard(menu));
 
 const switchToggle = document.querySelector('#theme-switch-toggle');
 const body = document.querySelector('body');
@@ -19,11 +18,23 @@ function currentTheme() {
     switchToggle.checked = 'true';
 }
 
-const changeTheme = function (event) {
-  body.classList.toggle(Theme.DARK);
-  if (body.classList.contains('dark-theme')) {
+// const changeTheme = function () {
+//   body.classList.toggle(Theme.DARK);
+//   if (body.classList.contains('dark-theme')) {
+//     localStorage.setItem('theme', Theme.DARK);
+//   } else {
+//     localStorage.setItem('theme', Theme.LIGHT);
+//   }
+// };
+
+const changeTheme = function () {
+  if (body.classList.contains('light-theme')) {
+    body.classList.remove(Theme.LIGHT);
+    body.classList.add(Theme.DARK);
     localStorage.setItem('theme', Theme.DARK);
   } else {
+    body.classList.remove(Theme.DARK);
+    body.classList.add(Theme.LIGHT);
     localStorage.setItem('theme', Theme.LIGHT);
   }
 };
