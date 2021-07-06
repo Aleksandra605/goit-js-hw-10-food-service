@@ -18,17 +18,8 @@ function currentTheme() {
     switchToggle.checked = 'true';
 }
 
-// const changeTheme = function () {
-//   body.classList.toggle(Theme.DARK);
-//   if (body.classList.contains('dark-theme')) {
-//     localStorage.setItem('theme', Theme.DARK);
-//   } else {
-//     localStorage.setItem('theme', Theme.LIGHT);
-//   }
-// };
-
 const changeTheme = function () {
-  if (body.classList.contains('light-theme')) {
+  if (body.classList.contains(Theme.LIGHT)) {
     body.classList.remove(Theme.LIGHT);
     body.classList.add(Theme.DARK);
     localStorage.setItem('theme', Theme.DARK);
