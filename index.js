@@ -33,5 +33,5 @@ const changeTheme = function () {
 currentTheme();
 switchToggle.addEventListener('change', changeTheme);
 
-console.log(switchToggle.checked);
-console.log(body);
+// console.log(switchToggle.checked);
+// console.log(body);
