@@ -10,7 +10,7 @@
     "dev": "parcel index.html",
     "build": "parcel build --no-minify index.html",
     "predeploy": "npm run build -- --public-url /goit-js-hw-10-food-service/",
-    "deploy": "gh-pages -d dist"
+    "deploy": "main -d dist"
   },
   "keywords": [],
   "author": "",
