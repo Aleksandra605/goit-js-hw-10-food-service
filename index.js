@@ -26,4 +26,4 @@ function changeTheme(e) {
   }
 }
 
-console.log(body);
+
